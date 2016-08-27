@@ -1,3 +1,5 @@
+# Django + PostgreSQL installation guide (Ubuntu 16.04)
+
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
@@ -22,8 +24,6 @@ $ cd $HOME/project_one
 $ python3 manage.py startapp one
 ```
 
-
-
 ```
 $ vim project_one/settings.py
 
@@ -43,8 +43,6 @@ DATABASES = {
 TIMEZONE = 'America/Argentina/Buenos_Aires'
 ```
 
-
-
 ```
 $ python3 manage.py migrate
 
@@ -52,15 +50,17 @@ $ python3 manage.py runserver
 ```
 
 
+## pgAdmin 3 configuration
 
-Open pgadmin3
-    > New server registration
-    > Name: 127.0.0.1
-    > Host: 127.0.0.1
-    > Port: 5432
-    > Maintenance DB: postgres
-    > Username: unixuser
-    > Password: ******
-    > Store password: YES
-    > Group: Servers
-    > [OK]
+Open pgadmin3 > New server registration
+
+- Name: 127.0.0.1
+- Host: 127.0.0.1
+- Port: 5432
+- Maintenance DB: postgres
+- Username: unixuser
+- Password: ******
+- Store password: YES
+- Group: Servers
+
+<OK>
