@@ -11,28 +11,28 @@ $ sudo -u postgres psql
 
 postgres=# \password unixuser
 
-$ psql postgres -c "CREATE DATABASE one WITH ENCODING='UTF8' OWNER=unixuser CONNECTION LIMIT=-1;"
+$ psql postgres -c "CREATE DATABASE projectname WITH ENCODING='UTF8' OWNER=unixuser CONNECTION LIMIT=-1;"
 
 $ sudo pip3 install --upgrade pip
 $ sudo pip3 install --upgrade Django
 $ sudo pip3 install --upgrade psycopg2
 
-$ django-admin startproject project_one
+$ django-admin startproject projectname
 
-$ cd $HOME/project_one
+$ cd $HOME/projectname
 
-$ python3 manage.py startapp one
+$ python3 manage.py startapp appname
 ```
 
 ```
-$ vim project_one/settings.py
+$ vim projectname/settings.py
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': '127.0.0.1',
         'PORT': 5432,
-        'NAME': 'one',
+        'NAME': 'projectname',
         'USER': 'unixuser',
         'PASSWORD': '******',
     }
